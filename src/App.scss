@@ -1,0 +1,30 @@
+// @import './styles/reset';
+
+//Input
+@import './styles/variables';
+@import './styles/function';
+@import './styles/mixins';
+@import './styles/fonts';
+@import './styles/placeholders';
+// @import './styles/cores';
+
+//components
+@import './components/Checkbox/style';
+@import './components/Loading/styles';
+@import './components/Input/style';
+@import './components/Button/styles';
+@import './components/Select/styles';
+@import './components/Modal/styles';
+@import './components/Accordion/styles';
+@import './components/File/styles';
+@import './components/ToggleButton/styles';
+
+
+// main home
+@import './screens/main/components/styles';
+@import './screens/account/components/SignIn/styles';
+@import './screens/account/components/SignUp/styles';
+
+@import './styles/font-awesome.min';
+
+@import './styles/themify-icons';

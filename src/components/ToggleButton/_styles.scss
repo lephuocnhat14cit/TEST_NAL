@@ -1,0 +1,113 @@
+.toggle-switch {
+  position: relative;
+  width: pxToVW(58);
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  text-align: left;
+  position: relative;
+
+  &__label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: pxToVW(20);
+    margin: 0;
+    border: pxToVW(1) solid $popup-border;
+
+    &__inner {
+      display: block;
+      width: 200%;
+      margin-left: -100%;
+      @include transition(0.3s ease-in 0s);
+
+      &::before,
+      &::after {
+        display: block;
+        float: left;
+        width: 50%;
+        height: pxToVW(22);
+        padding: 0;
+        color: $white;
+        box-sizing: border-box;
+      }
+
+      &:before {
+        content: "공개";
+        padding-left: pxToVW(6);
+        background-color: $bg-progress-2;
+        font-size: pxToVW(10);
+        line-height: pxToVW(22);
+        color: $bg-button-primary;
+        font-weight: $regular;
+      }
+
+      &::after {
+        content: "비공개";
+        padding-right: pxToVW(7);
+        background-color: $popup-border;
+        text-align: right;
+        font-size: pxToVW(10);
+        line-height: pxToVW(22);
+        letter-spacing: pxToVW(-0.2);
+        color: $dove-gray;
+        font-weight: $regular;
+      }
+    }
+
+    &__switch {
+      display: block;
+      width: pxToVW(22);
+      height: pxToVW(22);
+      margin-top: pxToVW(1);
+      background: $white;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      border: pxToVW(1) solid $color-input;
+      border-radius: pxToVW(20);
+      @include transition(0.5s);
+    }
+  }
+
+  &__checkbox {
+    display: none;
+
+    &:checked+.toggle-switch__label {
+      .toggle-switch__label__inner {
+        margin-left: 0;
+      }
+
+      .toggle-switch__label__switch {
+        right: 0;
+        left: auto;
+        border: pxToVW(1) solid $bg-button-primary;
+      }
+    }
+  }
+
+  @media (min-width: 640px) {
+    width: responsiveTablet(48);
+
+    &__label {
+      border-radius: responsiveTablet(20);
+
+      &__inner {
+
+        &::before,
+        &::after {
+          height: responsiveTablet(28);
+        }
+      }
+
+      &__switch {
+        width: responsiveTablet(22);
+        height: responsiveTablet(22);
+        border-radius: responsiveTablet(20);
+      }
+    }
+  }
+}

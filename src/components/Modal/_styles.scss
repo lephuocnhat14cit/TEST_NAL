@@ -1,0 +1,236 @@
+.modal {
+  z-index: 9999;
+
+  &.index-9998 {
+    z-index: 9998;
+  }
+
+  .modal-dialog {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 30px;
+    margin: 0;
+    max-width: 500px;
+  }
+}
+
+.modal-backdrop {
+  &.show {
+    opacity: 0.4;
+  }
+}
+
+.modal-content {
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: $popup-txt;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+
+  &__iconClose {
+    position: absolute;
+    right: pxToVW(0);
+    top: -25px;
+    width: 21px;
+    height: 21px;
+
+    &:focus {
+      outline: none;
+    }
+
+    img {
+      width: 19px;
+      height: 19px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .modal-title {
+    width: 100%;
+    font-size: 14px;
+    font-weight: $medium;
+    line-height: 20px;
+    color: $popup-txt;
+    padding: 20px 0;
+  }
+
+  .modal-body {
+    width: 100%;
+    white-space: pre-line;
+    padding: 0 20px;
+    margin: 0;
+
+    &__has-header {
+      padding: 0 0 30px;
+      font-size: 24px;
+      line-height: 20px;
+      letter-spacing: -1px;
+      color: $popup-txt;
+
+      .title-content {
+        font-weight: 500;
+        font-size: 20px;
+
+      }
+    }
+
+    &__no-header {
+      padding: 44px 0;
+      font-size: 14px;
+    }
+
+    .content {
+      font-size: 13px;
+      font-weight: $light;
+      line-height: 18px;
+      letter-spacing: pxToVW(-0.46);
+      text-align: center;
+
+      &--login-success {
+        img {
+          margin-bottom: pxToVW(20);
+          width: pxToVW(280);
+          height: pxToVW(149);
+        }
+
+        p {
+          // @include fontSize(#{pxToVW(20)}, $bold);
+          font-size: pxToVW(20);
+          line-height: pxToVW(27);
+          letter-spacing: pxToVW(-0.71);
+          color: $popup-txt;
+          margin: 0;
+
+          &.text-welcome {
+            width: 100%;
+            padding-bottom: pxToVW(14);
+          }
+
+          &.pointSuccess {
+            width: pxToVW(190);
+          }
+        }
+
+        h2 {
+          font-size: pxToVW(25);
+          line-height: pxToVW(27);
+          // color: $btn-bg;
+          font-weight: $bold;
+        }
+
+        h3 {
+          // @include fontSize(#{pxToVW(13)}, $regular);
+          line-height: pxToVW(18);
+          letter-spacing: pxToVW(-0.46);
+          color: $popup-txt;
+
+          &.text-middle {
+            padding-bottom: pxToVW(15);
+          }
+        }
+      }
+    }
+  }
+
+  .modal-footer {
+    width: 100%;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: $white;
+    border: none;
+    border-top: 1px solid $popup-border;
+    border-bottom-right-radius: 39px;
+    border-bottom-left-radius: 39px;
+    position: relative;
+    z-index: 999;
+
+    .group-button {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .button {
+      height: auto;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0;
+      color: $popup-btn-right;
+      padding: 0;
+      background-color: transparent;
+
+      &.buttonConfirm {
+        font-weight: $medium;
+      }
+
+      &.btn-left {
+        color: $popup-btn-left;
+      }
+
+      &.btn-right {
+        color: $popup-btn-right;
+        border-left: 1px solid $popup-border;
+      }
+    }
+  }
+}
+
+.modal-footer>* {
+  margin: 0;
+}
+
+.modal-edit {
+  .modal-content {
+    .modal-body {
+      padding: 0;
+
+      &__no-header {
+        padding: 0;
+
+        .item-edit {
+          font-size: pxToVW(13);
+          line-height: pxToVW(19);
+          letter-spacing: pxToVW(-0.33);
+          color: $dove-gray;
+          font-weight: $regular;
+          padding: pxToVW(15) 0 pxToVW(14);
+          border-bottom: pxToVW(1) solid $popup-border;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          &.active {
+            background-color: $active-popup;
+            color: $bg-button-primary;
+            font-weight: $bold;
+          }
+        }
+
+        .title-content {
+          max-height: pxToVW(250);
+          overflow: auto;
+        }
+      }
+    }
+  }
+}
+
+.modal-open {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
