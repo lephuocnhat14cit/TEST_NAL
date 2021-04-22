@@ -24,7 +24,6 @@ const MainPage = ({ getUser, dataUser }: Props) => {
 
   const startPage = (pageIndex - 1) * itemsCountPage;
   const [paged, setPaged] = useState(startPage);
-  console.log(dataUser && dataUser, 'dataUser');
   const [listDataUser, setListDataUser] = useState(dataUser || []);
 
   useEffect(() => {
@@ -32,7 +31,6 @@ const MainPage = ({ getUser, dataUser }: Props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pageIndex]);
 
-  console.log(listDataUser, 'listDataUser');
   useEffect(() => {
     setTotalItem(dataUser && dataUser.length);
   }, [dataUser]);
