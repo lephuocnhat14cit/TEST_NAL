@@ -12,9 +12,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 0 30px;
+    padding: 0 pxToVW(30);
     margin: 0;
-    max-width: 500px;
+    max-width: pxToVW(500);
   }
 }
 
@@ -39,17 +39,17 @@
   &__iconClose {
     position: absolute;
     right: pxToVW(0);
-    top: -25px;
-    width: 21px;
-    height: 21px;
+    top: pxToVW(-25);
+    width: pxToVW(21);
+    height: pxToVW(21);
 
     &:focus {
       outline: none;
     }
 
     img {
-      width: 19px;
-      height: 19px;
+      width: pxToVW(19);
+      height: pxToVW(19);
 
       &:focus {
         outline: none;
@@ -59,42 +59,41 @@
 
   .modal-title {
     width: 100%;
-    font-size: 14px;
+    font-size: pxToVW(14);
     font-weight: $medium;
-    line-height: 20px;
+    line-height: pxToVW(20);
+    letter-spacing: pxToVW(-0.28);
     color: $popup-txt;
-    padding: 20px 0;
+    padding: pxToVW(20) pxToVW(0);
   }
 
   .modal-body {
     width: 100%;
     white-space: pre-line;
-    padding: 0 20px;
+    padding: 0 pxToVW(20);
     margin: 0;
 
     &__has-header {
-      padding: 0 0 30px;
-      font-size: 24px;
-      line-height: 20px;
-      letter-spacing: -1px;
+      padding: 0 0 pxToVW(30);
+      font-size: pxToVW(14);
+      line-height: pxToVW(20);
+      letter-spacing: pxToVW(-0.28);
       color: $popup-txt;
 
       .title-content {
-        font-weight: 500;
-        font-size: 20px;
-
+        font-weight: $light;
       }
     }
 
     &__no-header {
-      padding: 44px 0;
-      font-size: 14px;
+      padding: pxToVW(44) 0;
+      font-size: pxToVW(14);
     }
 
     .content {
-      font-size: 13px;
+      font-size: pxToVW(13);
       font-weight: $light;
-      line-height: 18px;
+      line-height: pxToVW(18);
       letter-spacing: pxToVW(-0.46);
       text-align: center;
 
@@ -150,9 +149,10 @@
     justify-content: center;
     background-color: $white;
     border: none;
+    padding: pxToVW(15) pxToVW(0);
     border-top: 1px solid $popup-border;
-    border-bottom-right-radius: 39px;
-    border-bottom-left-radius: 39px;
+    border-bottom-right-radius: pxToVW(39);
+    border-bottom-left-radius: pxToVW(39);
     position: relative;
     z-index: 999;
 
@@ -164,9 +164,9 @@
 
     .button {
       height: auto;
-      font-size: 14px;
-      line-height: 20px;
-      letter-spacing: 0;
+      font-size: pxToVW(14);
+      line-height: pxToVW(20);
+      letter-spacing: pxToVW(-0.28);
       color: $popup-btn-right;
       padding: 0;
       background-color: transparent;

@@ -10,20 +10,9 @@ type Props = {
   type?: string,
 };
 
-const Button = ({
-  isDisabled = false,
-  onClick,
-  customClass = '',
-  children,
-  type,
-}: Props) => {
+const Button = ({ isDisabled = false, onClick, customClass = '', children, type }: Props) => {
   return (
-    <button
-      type={type}
-      className={`button ${customClass}`}
-      disabled={isDisabled}
-      onClick={onClick}
-    >
+    <button type={type} className={`button ${customClass}`} disabled={isDisabled} onClick={onClick}>
       {children}
     </button>
   );

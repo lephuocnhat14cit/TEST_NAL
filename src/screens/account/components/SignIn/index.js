@@ -174,11 +174,9 @@ const SignIn = ({ signIn, token, type, resetType, isCheckedBox }: Props) => {
             setIsOpen(false);
           }}
           customClassButton="w-100"
-          textBtnRight="confirm"
+          Btn="confirm"
           isShowHeader
           title="notification"
-          classNameBtnRight="btn-right"
-          classNameBtnLeft="btn-left"
         >
           <div className="title-content">{textError}</div>
         </ModalPopup>

@@ -24,12 +24,12 @@
       height: 18px;
       width: 18px;
       border: 1px solid #248afd;
-      left: pxToVW(-1);
+      left: -4px;
       top: 0;
       position: absolute;
       content: "";
       display: inline-block;
-      background-color: $white;
+      background-color: #fff;
     }
 
     &::after {
@@ -39,12 +39,14 @@
       width: 11px;
       border-left: 2px solid;
       border-bottom: 2px solid;
-      color: $white;
+      color: #fff;
       transform: rotate(-45deg);
       content: none;
       left: -1px;
       top: 4px;
     }
+
+
   }
 
   &.checkbox--checked {

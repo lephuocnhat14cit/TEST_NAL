@@ -201,13 +201,13 @@ const Header = ({ logOut }: Props) => {
             </div>
           </li>
         </ul>
-        <button
+        <div
           className="navbar-toggler navbar-toggler-right d-lg-none align-self-center"
           type="button"
           data-toggle="offcanvas"
         >
           <span className="ti-view-list" />
-        </button>
+        </div>
       </div>
     </div>
   );

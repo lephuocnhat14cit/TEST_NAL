@@ -11,14 +11,7 @@ type Props = {
   customClass?: string,
 };
 
-export const Checkbox = ({
-  label = '',
-  name,
-  checked,
-  onChange,
-  onKeyPress = null,
-  customClass,
-}: Props) => {
+export const Checkbox = ({ label = '', name, checked, onChange, onKeyPress = null, customClass }: Props) => {
   return (
     <div className={`checkbox ${checked ? 'checkbox--checked' : ''}`}>
       <label className="checkbox__label" htmlFor={name}>
